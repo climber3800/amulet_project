@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+{% load static %}
+<link rel="icon" href="{% static 'favicon.ico' %}">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amulet Website</title>
+
+    <link rel="stylesheet" href="{% static 'css/land-page.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base_footer.css' %}">
+  <style>
+@font-face {font-family: "RuneFont";
+  src: url('/static/fonts/runes/one.ttf');}
+  </style>
+</head>
+
+<body>
+  <!-- Hero -->
+ <section class="et-hero-tabs">
+    <div id="particles-js">
+        <div class="buttons-frame">
+            <div class="amulets" id="love1">love</div>
+            <div class="amulets" id="health1">health</div>
+            <div class="amulets" id="protection1">protection</div>
+            <div class="amulets" id="courage1">courage</div>
+        </div>
+        <div class="buttons-frame_bottom">
+            <div class="amulets" id="vegvisir1">vegvisir</div>
+            <div class="amulets" id="yggdrasil1">yggdrasil</div>
+            <div class="amulets" id="valknut1">valknut</div>
+            <div class="amulets" id="aegishjalmur1">aegishjalmur</div>
+        </div>
+        <div id="hero_content-frame">
+            <a id="click_circle" href="#tab-es6">
+                <div class="circle">
+                    <img id="love" src="{% static 'images/hero_runes/love.png' %}">
+                    <img id="protection" src="{% static 'images/hero_runes/protection.png' %}">
+                    <img id="courage" src="{% static 'images/hero_runes/courage.png' %}">
+                    <img id="health" src="{% static 'images/hero_runes/health.png' %}">
+                    <img id="vegvisir" src="{% static 'images/hero_runes/vegvisir.png' %}">
+                    <img id="yggdrasil" src="{% static 'images/hero_runes/yggdrasil.png' %}">
+                    <img id="valknut" src="{% static 'images/hero_runes/valknut.png' %}">
+                    <img id="aegishjalmur" src="{% static 'images/hero_runes/aegishjalmur.png' %}">
+                    <img id="silver" src="{% static 'images/hero_runes/silver.png' %}">
+                    <img id="steel" src="{% static 'images/hero_runes/steel.png' %}">
+
+                    <img id="runes" src="{% static 'images/hero_runes/runes.png' %}">
+                </div>
+            </a>
+                <div id="hero-text">
+                    <h2 id="create_amulet_headline">Create your personal RUNIC Amulet!</h2>
+                    <h4 id="shipping_headline">Free shipping worldwide!</h4>
+                </div>
+        </div>
+        <div class="silver-text hover-target" id="silver1">Silver</div>
+        <div class="steel-text hover-target" id="steel1">Steel</div>
+
+    </div>
+ </section>
+  <nav>
+   <div class="et-hero-tabs-container">
+     <a class="et-hero-tab" href="#tab-es6">START!</a>
+     <a class="et-hero-tab" href="#tab-flexbox">RUNIC AMULETS</a>
+     <a class="et-hero-tab" href="#tab-react">RUNES</a>
+     <a class="et-hero-tab" href="#tab-angular">ABOUT US</a>
+     <a class="et-hero-tab" href="#tab-other">CONTACT</a>
+     <span class="et-hero-tab-slider"></span>
+   </div>
+  </nav>
+ <!-- Main -->
+ <main>
+
+   <section class="et-slide" id="tab-es6">
+     <h1>Welcome to our personalized runic amulet creation process!</h1>
+           <div class="create-text">
+               <p>Unleash the power of ancient symbols and harness their energy to enhance your life's journey. At our mystical workshop, we specialize in crafting unique amulets that are tailored to your individuality, combining the ancient art of runic symbolism with your personal desires.</p>
+               <p>To embark on this transformative experience, simply follow our intuitive creation process. We will guide you through each step, ensuring that your amulet resonates with your inner essence and empowers you on your chosen path.</p>
+           </div>
+
+       <div class="start_button_main_frame">
+           <div class="start_button_left"></div>
+           <div class="start_button_frame">
+                <a href="{% url 'amulet:rune_create_design' %}">
+                    <button class="octagon">start</button>
+                </a>
+           </div>
+           <div class="start_button_right"></div>
+       </div>
+           <div class="create-text">
+               <div class="steps_frame_text">
+                   <h3>Step 1: Choose the Heart of Your Amulet</h3>
+               <p>The heart of your amulet is the core that embodies the essence of your intentions. It serves as the focal point, radiating the energies that will shape your amulet. Select from our range of captivating options, such as a gemstone, a symbolic charm, or a sacred symbol that resonates deeply with your being.</p>
+               </div>
+               <div class="steps_frame_images">
+                   <img class="heart" src="{% static 'images/amulet_style/Yggdrasil.png' %}">
+                   <img class="heart" src="{% static 'images/amulet_style/Vegvisir.png' %}">
+                   <img class="heart" src="{% static 'images/amulet_style/The Horned Triskel.png' %}">
+               </div>
+           <br>
+               <div class="steps_frame_text">
+                   <h3>Step 2: Enter Your Name</h3>
+               <p>Provide us with your name, the foundation upon which your personalized runic amulet will be crafted. The ancient runic symbols will honor your unique identity and infuse your amulet with its own distinct energy.</p>
+               </div>
+               <div class="steps_frame_images">
+                   <img class="name" src="{% static 'images/create_section/name.png' %}">
+               </div>
+           <br>
+               <div class="steps_frame_text">
+                   <h3>Step 3: Choose Your Horoscope Sign</h3>
+               <p>Astrology plays a crucial role in understanding the cosmic influences that shape our lives. Select your horoscope sign, and we will weave its celestial energy into your amulet, harmonizing it with your individual traits and aspirations.</p>
+               </div>
+               <div class="steps_frame_images">
+                   <img class="horoscope" src="{% static 'images/create_section/horoscope.png' %}">
+               </div>
+           <br><div class="steps_frame_text">
+               <h3>Step 4: Select Your Desired Qualities</h3>
+               <p>Reflect on the qualities you wish to amplify within yourself. Our artisans will carefully incorporate these traits into your runic amulet, allowing you to embody and manifest them more fully. Choose from a selection of virtues such as courage, wisdom, love, abundance, and many more.</p>
+           </div>
+               <div class="steps_frame_images">
+                   <img class="qualities" src="{% static 'images/create_section/quality.png' %}">
+               </div>
+           <br><div class="steps_frame_text">
+               <h3>Step 5: Define Your Goals</h3>
+               <p>Every journey begins with a destination. What are your aspirations and dreams? By setting your goals, we can align the runes within your amulet to act as guides and catalysts, helping you navigate towards success and fulfillment.</p>
+           </div>
+               <div class="steps_frame_images">
+                   <img class="goals" src="{% static 'images/create_section/goal.png' %}">
+               </div>
+           <br><div class="steps_frame_text">
+               <h3>Step 6: Material Selection</h3>
+               <div id="material_frame">
+                   <p>Choose the material that best resonates with your intentions. Each material carries its own unique properties, adding another layer of energy to your amulet. Whether it's sterling silver for purity, rose quartz for love, or obsidian for protection, your chosen material will amplify the potency of your personalized amulet.</p>
+                        <div id="material_frame_images">
+                            <img src="{% static 'images/create_section/material.jpg' %}">
+                        </div>
+               </div>
+           </div>
+
+           <br><br><div class="conclusion">
+               <div class="conclusion_text">
+               <p>Once you've completed these steps, our skilled artisans will commence the creation of your bespoke runic amulet. Combining ancient wisdom, modern craftsmanship, and your personal input, they will craft a powerful talisman that resonates with your essence and aids you in achieving your goals.</p>
+               <p>Wearing your personalized runic amulet is more than a fashion statement; it's a testament to your commitment to self-improvement and the pursuit of your dreams. Allow the ancient runes to weave their magic and become your steadfast companions on your journey to personal empowerment.</p>
+               <p>Begin the creation of your unique runic amulet now and unlock the hidden potential within you. Let the power of the runes guide you towards a brighter future.</p>
+               </div>
+               <div class="conclusion_image">
+                <img src="{% static 'images/create_section/forge.jpg' %}">
+               </div>
+           </div>
+       </div>
+   </section>
+
+   <section class="et-slide" id="tab-flexbox">
+     <h1>About runic amulets</h1>
+       <div class="about_amulet_section">
+           <div class="text-frame" id="top_text">
+    <p>Rune amulets are powerful talismans that have been used for centuries to protect their owners from harm and negative energy. These ancient symbols, steeped in mythology and magic, are believed to hold tremendous power and can be worn as a necklace, bracelet, or even carried in a pocket or purse.</p>
+    <p>The protective power of the rune amulet lies in the symbols themselves, each one imbued with a unique energy and meaning. The runes have been used for divination and magic for thousands of years, and their power has been recognized and respected by many cultures and civilizations around the world.</p>
+    <p>When you wear a rune amulet, you are tapping into this ancient power and inviting its protection into your life. Whether you are facing personal challenges, difficult situations at work, or just want to feel more grounded and centered in your daily life, a rune amulet can help you feel more protected and supported.</p>
+           </div>
+            <div class="image-frame">
+                <img src="{% static 'images/amulets/8.jpg' %}">
+            </div>
+       </div>
+       <div class="about_amulet_section_reverse">
+           <div class="text-frame" id="bottom_text">
+    <p>When you wear a rune amulet, you are tapping into this ancient power and inviting its protection into your life. Whether you are facing personal challenges, difficult situations at work, or just want to feel more grounded and centered in your daily life, a rune amulet can help you feel more protected and supported.</p>
+    <p>The runes used in amulets are carefully chosen based on their specific properties and meanings. Some runes are associated with strength, courage, and resilience, while others are associated with healing, love, and abundance. When combined together in an amulet, they create a powerful protective shield that can help you navigate the ups and downs of life with greater ease and grace.</p>
+    <p>So why should you have a rune amulet? Simply put, it can help you feel more protected, grounded, and empowered in your daily life. Whether you are looking for physical protection from harm, emotional support during challenging times, or spiritual guidance on your path, a rune amulet can offer you the strength and resilience you need to face any challenge that comes your way.</p>
+           </div>
+            <div class="image-frame">
+                <img src="{% static 'images/amulets/1.png' %}">
+            </div>
+       </div>
+   </section>
+
+   <section class="et-slide" id="tab-react">
+    <h1>The power of runes and their meanings</h1>
+
+     <div class="runes_section">
+         <div class="text-frame" id="top_runes_text">
+         <p>Runes, with their ancient origins and mystical allure, hold profound symbolic meanings that resonate with the human spirit. Each rune carries its own unique energy and wisdom, offering guidance, protection, and empowerment to those who seek their power.</p>
+         <p>The history of runes can be traced back to ancient Germanic and Scandinavian cultures, where they were used as a form of writing and divination. The runic alphabet, known as the Futhark, consists of a set of characters, each representing a specific sound and concept.</p>
+         <p>The word "rune" itself is derived from the Old Norse word "rún," meaning "secret" or "mystery," emphasizing the esoteric nature of these symbols. The knowledge of runes was considered sacred and was often passed down through generations within certain groups, such as the Norse seers or wise women known as "völvas."</p>
+         <p>Each rune in the Futhark has its own name, sound, and corresponding meaning. The traditional runic alphabet consists of 24 characters, divided into three sets or "aetts" of eight runes each. These aetts are associated with different deities or cosmic forces, and they often represent specific aspects of life, nature, and the human condition.</p>
+         </div>
+         <div class="image-frame">
+                <img src="{% static 'images/amulets/10.jpg' %}">
+         </div>
+     </div>
+     <div class="second_runes_section">
+         <div id="second_runes_text">
+             <p>The first aett is linked to the god Freyr, associated with fertility, prosperity, and growth. Runes in this group include Fehu, which symbolizes wealth and abundance, and Uruz, representing primal power and vitality.</p>
+             <p>The second aett is connected to the god Hagal, associated with transformation and the forces of nature. Runes in this group include Thurisaz, symbolizing protection and defense, and Raido, representing journeys and personal development.</p>
+             <p>The third aett is linked to the god Tyr, associated with justice, honor, and courage. Runes in this group include Ansuz, which signifies wisdom and communication, and Kenaz, representing knowledge and creativity.</p>
+             <p>In addition to their individual meanings, runes can also be combined to form bindrunes, where multiple runes are overlaid to create a single symbol. Bindrunes can enhance or modify the energies of the individual runes, creating a more complex and nuanced interpretation.</p>
+         </div>
+         <div class="image-frame" id="three_types">
+                <img src="{% static 'images/amulets/9.png' %}">
+         </div>
+     </div>
+     <div class="third_runes_section">
+         <div id="third_runes_text">
+             <p>Throughout history, runes have been used for various purposes. They were inscribed on objects, such as weapons or amulets, to provide protection or enhance their qualities. Runes were also utilized in divination practices, where they were cast or drawn from a bag and interpreted to gain insight into the past, present, or future.</p>
+             <p>In modern times, runes continue to fascinate and inspire people. Many individuals use them as a tool for self-reflection, meditation, and personal growth. Runes can be incorporated into spiritual practices, such as rune magic or runic yoga, where their energies are harnessed for healing, manifestation, or spiritual connection.</p>
+             <p>It's important to note that the interpretation and use of runes may vary among different individuals and traditions. While there are traditional meanings associated with each rune, personal intuition and experience play a significant role in understanding their messages. Whether seeking guidance, protection, or empowerment, runes offer a pathway to explore the ancient wisdom and mystical realms that resonate with the human spirit.</p>
+         </div>
+         <div class="image-frame">
+                <img src="{% static 'images/amulets/11.jpg' %}">
+         </div>
+     </div>
+       <h4>Let us explore a glimpse into the enchanting world of these sacred symbols:</h4>
+       <button class="next_button">EXPLORE</button>
+   </section>
+
+   <section class="et-slide" id="tab-angular">
+     <h1>About Us</h1>
+
+       <div class="about_frame">
+           <div class="about_text_frame">
+                <p>Welcome to out company, the home of personalized runic amulets in the heart of Georgia, Tbilisi. Our company is a passionate start-up dedicated to crafting unique and meaningful creations that resonate with the human spirit.</p>
+                <p>We believe that the ancient art of runic symbolism holds immense power and significance. With our creative team based right here in Tbilisi, we bring together a fusion of traditional craftsmanship and modern design techniques to create exquisite personalized runic amulets.</p>
+                <p>What sets us apart is our commitment to providing a truly personalized experience. We understand that each individual carries their own unique energy and story, and our aim is to capture and translate those narratives into tangible and wearable symbols of empowerment.</p>
+               <p>Located in Georgia, our company benefits from both a rich cultural heritage and a vibrant artistic community. Our forging capacities in Tbilisi allow us to bring our designs to life with exceptional craftsmanship and attention to detail. We take pride in using high-quality materials and traditional techniques to ensure that every runic amulet we produce is a masterpiece of artistry and symbolism.</p>
+           </div>
+           <div class="image-frame">
+                <img src="{% static 'images/amulets/12.jpg' %}">
+           </div>
+
+       </div>
+       <div class="second_about_frame">
+           <div class="second_about_text_frame">
+               <p>While we currently cater to the local market in Georgia, our vision extends far beyond our borders. As a start-up, we have set our sights on expanding our reach and delivering our products to customers worldwide. We are dedicated to continuously growing our brand and establishing ourselves as a trusted and respected name in the realm of personalized runic amulets.</p>
+               <p>Whether you seek a powerful talisman for protection, a symbol of love and connection, or a reminder of your personal journey, we are here to bring your vision to life. Step into the world of ancient wisdom and contemporary design with us, and let our personalized runic amulets empower and inspire you.</p>
+               <p>Join us on this exciting journey as we explore the boundless potential of runic symbolism and share its transformative power with the world. Together, we can harness the energies of the past and forge a future illuminated by the timeless allure of personalized runic amulets.</p>
+               <p>Please feel free to reach out to us with any inquiries or to begin your own personalized runic amulet journey. We look forward to connecting with you and creating something truly extraordinary together.</p>
+           </div>
+           <div class="image-frame">
+                <img src="{% static 'images/amulets/13.jpg' %}">
+           </div>
+       </div>
+
+
+   </section>
+
+   <section class="et-slide" id="tab-other">
+     <h1>Contact</h1>
+       <p>Thank you for your interest in our company. We would be delighted to assist you in any way we can. We value open communication with our customers and strive to provide prompt and friendly assistance. Whether you have a question about our personalized runic amulets, would like to discuss a custom order, or simply want to know more about our services, we are here to help. Please find our contact information below:</p>
+       <div class="contact_text_frame">
+           <p><b>Address:</b> 123 Runic Way, Tbilisi, Georgia <br> <b>Phone:</b> +1-234-567-8901 <br> <b>Email:</b> info@yourcompanyname.com</p>
+           <p><b>Operating Hours:</b><br>Monday - Friday: 9:00 AM - 6:00 PM (GMT+4)<br>Saturday: 10:00 AM - 4:00 PM (GMT+4)<br>Sunday: Closed</p>
+       </div>
+       <p>We value open communication with our customers and strive to provide prompt and friendly assistance. Whether you have a question about our personalized runic amulets, would like to discuss a custom order, or simply want to know more about our services, we are here to help.</p>
+
+   </section>
+
+ </main>
+
+<footer class="site-footer">
+        <div class="container-footer">
+            <div class="col-sm-12_col-md-6">
+              <h6>About</h6>
+              <p class="text-justify">Our Company is a Tbilisi-based start-up specializing in personalized runic amulets. Our team of skilled artisans combines traditional craftsmanship with modern design to create unique and meaningful symbols of empowerment. We are dedicated to providing a personalized experience and crafting exquisite amulets that resonate with our customers' stories and aspirations. Join us on this transformative journey and explore the timeless allure of runic symbolism.</p>
+            </div>
+
+            <div class="col-xs-6_col-md-3">
+              <h6>Categories</h6>
+              <ul class="footer-links">
+                <li><a href="{% url 'runes_func' %}">Main</a></li>
+                <li><a href="{% url 'runes_func' %}#tab-es6">Start</a></li>
+                <li><a href="{% url 'runes_func' %}#tab-flexbox">About Runic Amulets</a></li>
+                <li><a href="{% url 'runes_func' %}#tab-react">About Runes</a></li>
+                <li><a href="{% url 'runes_func' %}#tab-angular">About Us</a></li>
+                <li><a href="{% url 'runes_func' %}#tab-other">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="col-xs-6_col-md-3">
+              <h6>Quick Links</h6>
+              <ul class="footer-links">
+                <li><a href="">Contribute</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Sitemap</a></li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+        <div class="container-copyright">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by
+           <a href="#">PERSONALAMULETS</a>.
+              </p>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+  </footer>
+
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="{% static 'javascript/hero_animation.js' %}"></script>
+    <script src="{% static 'javascript/circle.js' %}"></script>
+    <script src="{% static 'javascript/land-page.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+{% extends "runes/base_runes.html" %}
+{% block body_block %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/name_horoscope.css' %}">
+
+<section>
+    <h1 class="h1-runes">Enter your name</h1>
+
+    <form class="style_form" method="post">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <div class="name_horoscope_form">
+            <div class="name_form">
+                <p id="name_text">In many cultures, names hold special significance and are believed to have an intrinsic power or energy. By incorporating the name of the amulet holder into the design of the amulet, the wearer can tap into this power and connect more deeply with the amulet's intended purpose.
+                For example, if the amulet is intended to provide protection or guidance, incorporating the name of the amulet holder into the design can help to strengthen the bond between the wearer and the amulet, making it more effective.
+                Additionally, the use of personalization in an amulet can also serve as a reminder to the wearer of their own personal power and agency. By having their name on the amulet, the wearer is reminded that they are the ones who ultimately hold the power to make positive changes in their lives.</p>
+                <div class="name_field_frame">
+                    <div class="name_field">
+                        <h2>First name</h2>
+                        {{ form.name }}
+                        {{ form.name.errors }}
+                    </div>
+                    <div class="name_field">
+                        <h2>Last name</h2>
+                        {{ form.last_name }}
+                        {{ form.last_name.errors }}
+                    </div>
+                </div>
+            </div>
+
+    <h1>Choose your horoscope sign</h1>
+            <p class="horoscope_text">Incorporating your horoscope sign, based on your date of birth, into your personalized runic amulet holds significant importance. Your horoscope sign carries unique energies and influences that shape your personality and life path. By integrating it into your amulet, you align yourself with the cosmic forces associated with your sign, unlocking its specific attributes, strengths, and qualities. This connection enhances the personal resonance and effectiveness of your amulet, allowing it to harmonize with your individual journey and empower you on a profound level.</p>
+
+            <div class="horoscope_field">
+                {% for sign in form.horoscope %}
+                <div class="horoscope-option">
+                    <div class="horoscope-option-images" style="background-image: url('{% static 'images/horoscope/'|add:sign.choice_label|add:'.jpg' %}');"></div>
+                    <div class="sign_name">{{ sign }}</div>
+                    <div class="sign_dates_frame">
+                      <p class="horoscope_dates">01.01-04.04</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <button class="next_button" name="next2">NEXT</button>
+    </form>
+</section>
+
+<script src="{% static 'javascript/horoscope.js' %}"></script>
+{% endblock %}

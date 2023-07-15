@@ -1,0 +1,47 @@
+{% extends "runes/base_runes.html" %}
+{% block body_block %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/material.css' %}">
+
+<section>
+    <h1 class="h1-runes"> Choose the material of your amulet </h1>
+    <form class="style_form" method="post">
+    {% csrf_token %}
+    <div class="material-options">
+        {% for material in form.material %}
+        <div class="material-option">
+            <div class="main_frame">
+                {% if material.choice_label == "Silver" %}
+                <div class="material-option-images">
+                    <div class="circle" style="background-image: url('{{ silver_amulet_src }}');"></div>
+                </div>
+                {% elif material.choice_label == "Stainless steel" %}
+                <div class="material-option-images">
+                    <div class="circle" style="background-image: url('{{ steel_amulet_src }}');"></div>
+                </div>
+                {% elif material.choice_label == "Wood" %}
+                <div class="material-option-images">
+                    <div class="circle" style="background-image: url('{{ wood_amulet_src }}');"></div>
+                </div>
+                {% endif %}
+
+                <div class="gold_frame_symbol"></div>
+                <div class="material_name">{{ material }}</div>
+                <div class="gold_frame_symbol"></div>
+                <div class="price_frame">
+                    <p class="price"></p>
+                </div>
+            </div>
+            <div class="material_text_frame">
+                <p class="material_description"></p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+        <button class="next_button" name="next5">NEXT</button>
+</form>
+
+</section>
+
+<script src="{% static 'javascript/material.js' %}"></script>
+{% endblock %}

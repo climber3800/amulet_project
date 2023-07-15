@@ -1,0 +1,19 @@
+{% extends "runes/base_runes.html" %}
+{% block body_block %}
+{% load static %}
+<style>
+    section {
+    height: 80vh;
+    }
+
+</style>
+
+<section>
+    <h2>We apologize for the inconvenience, but our website is currently under development.</h2>
+    <h4>We are working diligently to launch the selling process of our personalized runic amulets as soon as possible.</h4>
+    <h4>Thank you for your patience, and we look forward to sharing our unique creations with you very soon.</h4>
+    <a href="{% url 'runes_func' %}">
+        <button class="next_button" name="next5">BACK</button>
+    </a>
+</section>
+{% endblock %}

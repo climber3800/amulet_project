@@ -1,0 +1,119 @@
+body {
+    background-image: linear-gradient(to right, rgba(73, 73, 73, 0.8), #c9c9c9, #e6e6e6, #c9c9c9, rgba(73, 73, 73, 0.8));
+    font-family: sans-serif, cursive;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 3% 10%;
+}
+
+h1 {
+text-align: center;
+font-size: 30px;
+text-transform: uppercase;
+}
+
+p {
+  text-align: justify;
+  color: #1C1C1C;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+
+.style_form {
+width: 100%;
+margin: 20px 0 0 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+/* nav bar */
+nav {
+display: flex;
+justify-content: center;
+margin: 0 0 10px 0;
+z-index: 9999;
+}
+a {
+	text-decoration: none;
+}
+.et-hero-tabs-container {
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    position: fixed;
+    border: 1px rgba(181, 160, 54, 0.8) solid;
+    z-index: 9999;
+}
+.et-hero-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background-color: rgba(36, 36, 36, 0.9);
+    color: rgba(235, 235, 235, 0.8);
+    letter-spacing: 0.1rem;
+	transition: all 0.5s ease;
+	font-size: 0.8rem;
+}
+.et-hero-tab:hover {
+  color: rgba(181, 160, 54, 0.8);
+  box-shadow: 0 0 10px 5px rgba(181, 160, 54, 0.8);
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+@media (min-width: 800px) {
+	.et-hero-tabs {
+    h1 {
+        font-size: 3rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+	}
+	.et-hero-tab {
+		font-size: 1rem;
+	}
+}
+
+/* Button */
+.next_button {
+  margin: 40px 0 40px 0;
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #373B44;
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 36px;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.next_button:hover,
+.next_button:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+.next_button:active {
+  background: var(--color);
+  color: rgba(181, 160, 54, 0.8);
+}
+

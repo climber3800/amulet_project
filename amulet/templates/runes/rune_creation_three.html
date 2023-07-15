@@ -1,0 +1,25 @@
+{% extends "runes/base_runes.html" %}
+{% block body_block %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/qualities.css' %}">
+
+
+<section>
+    <h1 class="h1-runes">Choose three qualities that you wish to include in your amulet</h1>
+    <form class="style_form" method="post">
+        <div class="image-options-qualities">
+            {% for quality in form.qualities %}
+            <div class="quality_option">
+                <div class="quality-option-images" style="background-image: url('{% static 'images/rune_qualities/'|add:quality.choice_label|add:'.jpg' %}');"></div>
+                <div class="quality_name">{{ quality }}</div>
+                <div class="quality_text">{{ quality.choice_label }}</div>
+            </div>
+            {% csrf_token %}
+            {% endfor %}
+        </div>
+            <button class="next_button" name="next3">NEXT</button>
+    </form>
+</section>
+
+<script src="{% static 'javascript/qualities.js' %}"></script>
+{% endblock %}

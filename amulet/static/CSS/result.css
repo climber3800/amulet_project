@@ -1,0 +1,122 @@
+.amulet_image_frame {
+width: 100%;
+display: flex;
+justify-content: center;
+}
+
+.circle {
+  aspect-ratio: 1/1;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: 5px solid rgba(181, 160, 54, 0.8);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.7);
+}
+@media (max-width: 767px) {
+  .circle {
+    width: 300px;
+    height:300px;
+  }
+}
+
+.congratulation {
+text-align: center;
+}
+
+#h3_head {
+border-top: 4px rgba(181, 160, 54, 0.8) solid;
+border-radius: 20%;
+padding: 10px 0 0 0;
+}
+
+.main_frame {
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 15px 0;
+}
+
+.headline_frame {
+height: 30%;
+width: 60%;
+border: 4px #4f4f4f solid;
+border-radius: 15%;
+cursor: pointer;
+text-align: center;
+transition: box-shadow 0.3s ease-in-out, background-color 0.7s ease-in-out, border 0.7s ease-in-out, color 0.7s ease-in-out, width 0.7s ease-in-out;
+}
+
+.main_frame.selected .headline_frame{
+border-left: 4px rgba(181, 160, 54, 0.8) solid;
+border-right: 4px rgba(181, 160, 54, 0.8) solid;
+color: #dedddc;
+background-color: #4f4f4f;
+width: 100%;
+}
+.main_frame.selected .headline_frame:hover {
+box-shadow: 0px 0px 10px white;
+}
+.headline_frame:hover {
+box-shadow: 0px 0px 10px black;
+}
+
+.text_frame {
+width: 90%;
+height: 0px;
+display: none;
+padding: 0 30px;
+}
+.main_frame.selected .text_frame {
+display: block;
+border-left: 4px rgba(181, 160, 54, 0.8) solid;
+border-right: 4px rgba(181, 160, 54, 0.8) solid;
+border-bottom: 4px rgba(181, 160, 54, 0.8) solid;
+border-radius: 0% 0% 40% 40% / 0% 0% 40% 40%;
+animation: prolong 0.7s ease-in-out 0.7s forwards, prolong_width 0.7s ease-in-out;
+}
+
+@keyframes prolong {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 150px;
+  }
+}
+@keyframes prolong_width {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+.main_frame.selected .text_frame p {
+opacity: 0;
+animation: opacity 0.7s ease-in-out 1.4s forwards;
+}
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 767px) {
+@keyframes prolong {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 400px;
+  }
+}
+
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% load static %}
+<link rel="icon" href="{% static 'favicon.ico' %}">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  <link rel="stylesheet" href="{% static 'css/base_runes.css' %}">
+  <link rel="stylesheet" href="{% static 'css/base_footer.css' %}">
+  <style>
+@font-face {font-family: "RuneFont";
+  src: url('/static/fonts/runes/one.ttf');}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="et-hero-tabs-container">
+     <a class="et-hero-tab" id="main" href="{% url 'runes_func' %}">MAIN</a>
+     <a class="et-hero-tab" id="about_amulets" href="{% url 'runes_func' %}#tab-flexbox">RUNIC AMULETS</a>
+     <a class="et-hero-tab" id="runes" href="{% url 'runes_func' %}#tab-react">RUNES</a>
+     <a class="et-hero-tab" id="about_us" href="{% url 'runes_func' %}#tab-angular">ABOUT US</a>
+     <a class="et-hero-tab" id="reviews" href="{% url 'runes_func' %}#tab-other">REVIEWS</a>
+   </div>
+</nav>
+
+    {% block body_block %}
+    {% endblock %}
+
+</body>
+
+<footer class="site-footer">
+        <div class="container-footer">
+            <div class="col-sm-12_col-md-6">
+              <h6>About</h6>
+              <p class="text-justify">Our Company is a Tbilisi-based start-up specializing in personalized runic amulets. Our team of skilled artisans combines traditional craftsmanship with modern design to create unique and meaningful symbols of empowerment. We are dedicated to providing a personalized experience and crafting exquisite amulets that resonate with our customers' stories and aspirations. Join us on this transformative journey and explore the timeless allure of runic symbolism.</p>
+            </div>
+
+            <div class="col-xs-6_col-md-3">
+              <h6>Categories</h6>
+              <ul class="footer-links">
+                <li><a href="{% url 'runes_func' %}">Main</a></li>
+                <li><a href="{% url 'runes_func' %}#tab-es6">Start</a></li>
+                <li><a href="{% url 'runes_func' %}#tab-flexbox">About Runic Amulets</a></li>
+                <li><a href="{% url 'runes_func' %}#tab-react">About Runes</a></li>
+                <li><a href="{% url 'runes_func' %}#tab-angular">About Us</a></li>
+                <li><a href="{% url 'runes_func' %}#tab-other">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="col-xs-6_col-md-3">
+              <h6>Quick Links</h6>
+              <ul class="footer-links">
+                <li><a href="">Contribute</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Sitemap</a></li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+        <div class="container-copyright">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by
+           <a href="#">PERSONALAMULETS</a>.
+              </p>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+  </footer>
+
+    {% block footer %}
+    {% endblock %}
+</html>

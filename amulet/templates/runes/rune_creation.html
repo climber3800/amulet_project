@@ -1,0 +1,33 @@
+{% extends "runes/base_runes.html" %}
+{% block body_block %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<section>
+
+  <h1 id="h1-heart">Choose the central symbol of your amulet</h1>
+      <p id="amulet_heart_text">The symbol located in the center of the amulet is often considered to be the "heart" or focal point of the amulet, representing its central purpose or meaning. The specific symbol chosen for the center of the amulet will depend on the intended purpose of the amulet. For example, a tree symbol Yggdrasil may represent growth and stability, while Valknut may represent strength and unity.</p>
+
+
+  <form class="style_form" method="post" >
+    {% csrf_token %}
+    <div class="image-options">
+      {% for radio in form.design %}
+        <div class="image-option">
+            <div class="image-option-images" style="background-image: url('{% static 'images/amulet_style/'|add:radio.choice_label|add:'.png' %}');"></div>
+                <div class="gold_frame_symbol"></div>
+            <div class="option-name">{{ radio }}</div>
+                <div class="gold_frame_symbol"></div>
+            <div class="option_text_frame">
+                <p class="symbol_description"></p>
+            </div>
+        </div>
+      {% endfor %}
+    </div>
+    <button class="next_button" name="next">NEXT</button>
+  </form>
+
+</section>
+
+<script src="{% static 'javascript/rune-java.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,149 @@
+.material-options {
+  display: flex;
+  justify-content: space-around;;
+  flex-wrap: wrap;
+}
+
+.material-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px #303030 solid;
+    border-radius: 5%;
+    width: 300px;
+    height: 350px;
+    margin: 0 20px 40px 20px;
+    cursor: pointer;
+    transition: box-shadow 1s ease-in-out, transform 1s ease-in-out, background-image 1s ease-in-out, height 1s ease-in-out;
+}
+.material-option:hover {
+  box-shadow: 0px 0px 10px black;
+}
+.material-option.selected {
+  box-shadow: 0 0 15px 5px black;
+  transform: scale(1.05);
+  height: 550px;
+  background-color: gold;
+  border: 5px rgba(181, 160, 54, 0.8) solid;
+  transition: box-shadow 1s ease-in-out, transform 1s ease-in-out, background-color 1s ease-in-out, height 1s ease-in-out, border 1s ease-in-out;
+}
+.material-option:not(.selected) {
+  transition: box-shadow 1s ease-in-out, transform 1s ease-in-out, background-color 1s ease-in-out, height 1s ease-in-out, border 1s ease-in-out;
+}
+.material-option:not(.selected):hover {
+  box-shadow: 0 0 25px 5px black;
+  transform: scale(1.05);
+}
+
+.main_frame {
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+transition: box-shadow 1s ease-in-out, transform 1s ease-in-out, background-color 1s ease-in-out, height 1s ease-in-out, border 1s ease-in-out;
+}
+.material-option.selected .main_frame {
+width: 100%;
+height: 53%;
+}
+
+.material-option-images {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle {
+    height: 200px;
+    width: 200px;
+    border: 2px rgba(181, 160, 54, 0.8) solid;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 5px black;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: width 1s ease-in-out, height 1s ease-in-out, border 1s ease-in-out, box-shadow 1s ease-in-out;
+}
+.material-option.selected .circle {
+height: 160px;
+width: 160px;
+box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7);
+border: 2px black solid;
+}
+
+.material_name {
+    width: 100%;
+    height: 15%;
+    text-align: center;
+    font-size: 30px;
+    margin: 5px 0 0 0;
+}
+
+.gold_frame_symbol {
+width: 70%;
+border: 3px rgba(181, 160, 54, 0.8) solid;
+border-radius: 60%;
+}
+.material-option.selected .gold_frame_symbol {
+  width: 80%;
+  border-radius: 80%;
+  border: 3px #303030 solid;
+  transition: width 1s ease-in-out, border-radius 1s ease-in-out, border 1s ease-in-out;
+}
+
+.price_frame {
+height: 10%;
+display: flex;
+align-items: center;
+padding: 0 0 10px 0;
+}
+
+.material_text_frame {
+width: 100%;
+height: 0%;
+}
+.material-option.selected .material_text_frame {
+  height: 47%;
+  transition: height 1s ease-in-out;
+}
+
+.material_description {
+  display: none;
+  text-align: center;
+  padding: 10px 10px;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  font-size: 16px;
+  margin: 5px 5px 0 5px;
+  border-left: 3px #303030 solid;
+  border-right: 3px #303030 solid;
+  border-top: 2px #303030 solid;
+  border-radius: 0% 0% 10% 10% / 0% 0% 10% 10%;
+  transition: opacity 0.5s ease-in-out;
+}
+.material-option.selected .material_description {
+  display: block;
+  opacity: 0;
+  animation: fade-in 0.5s ease-in-out 1s forwards;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.material-option input[type="radio"] {
+  display: none;
+}
+
+
+@media (max-width: 767px) {
+h1 {
+  margin: 35px 0 0 0;
+}

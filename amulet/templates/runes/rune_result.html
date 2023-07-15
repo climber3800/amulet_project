@@ -1,0 +1,61 @@
+{% extends "runes/base_runes.html" %}
+{% block body_block %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/result.css' %}">
+
+<section>
+    <h1>The image of the composed amulet</h1>
+    <div class="amulet_image_frame">
+        <div class="circle" style="background-image: url('{{ amulet_src }}');"></div>
+    </div>
+    <h3 class="congratulation">Congratulations on your personalized runic amulet!</h3>
+    <h3 id="h3_head">Let's walk through the steps we took to create this unique and meaningful piece:</h3>
+
+    <div class="main_frame" id="heart">
+        <div class="headline_frame" id="heart_headline">
+            <h2>THE HEART</h2>
+        </div>
+        <div class="text_frame" id="heart_text">
+           <p>At the core of your amulet, we have chosen a powerful symbol <span>{{ style }}</span> that represents the essence of your intentions and aspirations. {{ description }}</p>
+        </div>
+    </div>
+    <div class="main_frame">
+        <div class="headline_frame">
+            <h2>YOUR NAME</h2>
+        </div>
+        <div class="text_frame">
+            <p>We incorporated your first and last name <span>({{ name}} {{last_name}})</span> into the amulet by using the first two runes <span>({{ name_runes }})</span> as an abbreviation. These runes carry the energy and connection of your name within the amulet.</p>
+        </div>
+    </div>
+    <div class="main_frame">
+        <div class="headline_frame">
+            <h2>YOUR HOROSCOPE</h2>
+        </div>
+        <div class="text_frame">
+           <p>Taking inspiration from your horoscope sign - <span>{{ horoscope }}</span>, we selected three runes that align with the qualities associated with your sign - <span>{{ horoscope_runes }}</span>. These runes infuse your amulet with the harmonizing energy of your astrological influences.</p>
+        </div>
+    </div>
+    <div class="main_frame">
+        <div class="headline_frame">
+            <h2>QUALITIES</h2>
+        </div>
+        <div class="text_frame">
+             <p>To enhance the power of your amulet, we added nine runes representing the qualities you desire to cultivate and reinforce in your life: <span>{{ qualities }}</span>.</p>
+        </div>
+    </div>
+    <div class="main_frame">
+        <div class="headline_frame">
+            <h2>GOALS</h2>
+        </div>
+        <div class="text_frame">
+             <p>The final touch involved incorporating your two main goals or intentions. Each goal is represented by five carefully chosen runes that symbolize and support the specific aspects of your desired outcomes. <span>{{ goals }}</span></p>
+        </div>
+    </div>
+
+    <a href="{% url 'amulet:rune_material' %}">
+        <button class="next_button" name="runes_matter_link">NEXT</button>
+    </a>
+</section>
+
+<script src="{% static 'javascript/result_text.js' %}"></script>
+{% endblock %}

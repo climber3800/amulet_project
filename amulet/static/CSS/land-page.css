@@ -1,0 +1,812 @@
+body {
+    background-image: linear-gradient(to right, rgba(73, 73, 73, 0.8), #c9c9c9, #e6e6e6, #c9c9c9, rgba(73, 73, 73, 0.8));
+    font-family: sans-serif, cursive;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 5% 10%;
+}
+
+h1 {
+text-align: center;
+text-transform: uppercase;
+}
+
+p {
+  text-align: justify;
+  color: #1C1C1C;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+
+/* Hero */
+.et-hero-tabs{
+	padding: 0 0;
+}
+
+#particles-js {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 95vh;
+  width: 100%;
+  }
+
+#hero_content-frame {
+  position: absolute;
+  top: 40px;
+  bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 767px) {
+#hero_content-frame {
+  top: 100px;
+  bottom: 150px;
+}
+}
+
+.circle {
+  aspect-ratio: 1/1;
+  width: 450px;
+  height: 450px;
+  margin: 0 0 1% 0;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 5px solid rgba(181, 160, 54, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 30px 15px rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: all 200ms linear;
+}
+.circle.animation {
+  box-shadow: 0 0 10px 5px rgba(181, 160, 54, 0.8);
+  transition: opacity 200ms linear, box-shadow 200ms linear;
+}
+.circle img {
+  max-width: 65%;
+  max-height: 65%;
+  display: none;
+  position: absolute;
+  transition: all 200ms linear;
+}
+.circle img.symbol-transition {
+  opacity: 0;
+}
+.circle:hover {
+box-shadow: 0 0 45px 25px rgba(255, 255, 255, 0.8);
+background-color: gold;
+}
+
+#silver {
+  max-width: 65%;
+  max-height: 65%;
+}
+#steel {
+  max-width: 65%;
+  max-height: 65%;
+}
+
+#runes {
+display: block;
+max-width: 95%;
+max-height: 95%;
+transition: transform 0.5s ease;
+}
+  #runes:hover {
+    animation: rotate 100s linear infinite;
+  }
+  #runes:not(:hover) {
+    animation: rotate-back 2s ease forwards;
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotate-back {
+    0% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
+@media (max-width: 767px) {
+  .circle {
+    width: 300px;
+    height:300px;
+  }
+  .circle img {
+  max-width: 50%;
+  max-height: 50%;
+  }
+  #runes {
+  max-width: 70%;
+  max-height: 70%;
+  }
+  #silver {
+  max-width: 50%;
+  max-height: 50%;
+  }
+  #steel {
+  max-width: 50%;
+  max-height: 50%;
+  }
+}
+
+#hero-text {
+display: flex;
+flex-direction: column;
+align-items: center;
+height: 20%;
+}
+
+#create_amulet_headline {
+  border-bottom: 5px rgba(181, 160, 54, 0.8) solid;
+  border-radius: 20%;
+  padding: 0 0 5px 0;
+}
+#shipping_headline {
+  border-bottom: 3px rgba(181, 160, 54, 0.8) solid;
+  border-radius: 20%;
+  padding: 0 0 5px 0;
+}
+
+/* hero buttons */
+.silver-text {
+    position: absolute;
+	font-size: 17px;
+	line-height: 20px;
+	font-weight: 700;
+	color: #fff;
+	letter-spacing: 2px;
+	top: 50%;
+	left: 40px;
+	cursor: pointer;
+	z-index: 2;
+	-webkit-writing-mode: vertical-lr;
+	writing-mode: vertical-lr;
+	transform: translateY(-50%);
+	-webkit-transition: all 200ms linear;
+	transition: all 200ms linear;
+}
+.silver-text:before {
+	position: absolute;
+	content: '';
+	top: 50%;
+	left: -25px;
+	height: 30px;
+	width: 30px;
+	margin-top: -15px;
+	z-index: -1;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 30px 30px;
+	background-image: url('http://www.ivang-design.com/svg-load/portfolio/left.svg');
+	opacity: 0.2;
+	-webkit-transition: all 200ms linear;
+	transition: all 200ms linear;
+}
+.silver-text:hover:before {
+	opacity: 1;
+	left: -30px;
+}
+.silver-text:hover {
+    color: rgba(36, 36, 36, 0.9);
+}
+.silver-text:active {
+  color: rgba(181, 160, 54, 0.8);
+  font-size: 22px;
+}
+
+.steel-text {
+    position: absolute;
+	font-size: 17px;
+	line-height: 20px;
+	font-weight: 700;
+	color: #fff;
+	letter-spacing: 2px;
+	top: 50%;
+	right: 40px;
+	cursor: pointer;
+	z-index: 2;
+	-webkit-writing-mode: vertical-lr;
+	writing-mode: vertical-lr;
+	transform: translateY(-50%) rotate(180deg);
+	-webkit-transition: all 200ms linear;
+	transition: all 200ms linear;
+}
+.steel-text:before {
+	position: absolute;
+	content: '';
+	top: 50%;
+	left: -25px;
+	height: 30px;
+	width: 30px;
+	margin-top: -15px;
+	z-index: -1;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 30px 30px;
+	background-image: url('http://www.ivang-design.com/svg-load/portfolio/left.svg');
+	opacity: 0.2;
+	-webkit-transition: all 200ms linear;
+	transition: all 200ms linear;
+}
+.steel-text:hover:before {
+	opacity: 1;
+	left: -30px;
+}
+.steel-text:hover {
+    color: rgba(36, 36, 36, 0.9);
+}
+.steel-text:active {
+  color: rgba(181, 160, 54, 0.8);
+  font-size: 22px;
+}
+
+.buttons-frame {
+position: absolute;
+margin: 0 0 20px 0;
+width: 90%;
+height: 5%;
+display: flex;
+justify-content: space-between;
+}
+
+.buttons-frame_bottom {
+width: 90%;
+position: absolute;
+bottom: 50px;
+height: 5%;
+display: flex;
+justify-content: space-between;
+}
+
+.amulets {
+    font-family: 'RuneFont', cursive;
+    font-size: 20px;
+	color: #fff;
+	letter-spacing: 1px;
+	cursor: pointer;
+	transition: all 200ms linear;
+}
+.amulets:hover {
+    color: rgba(36, 36, 36, 0.9);
+}
+.amulets:active {
+  color: rgba(181, 160, 54, 0.8);
+  transform: scale(1.5);
+}
+
+
+/* navigation bar */
+nav {
+display: flex;
+justify-content: center;
+}
+
+a {
+	text-decoration: none;
+}
+.et-hero-tabs-container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7);
+    background: #fff;
+    z-index: 10;
+    border-top: 2px rgba(181, 160, 54, 0.8) solid;
+    border-bottom: 2px rgba(181, 160, 54, 0.8) solid;
+}
+.et-hero-tabs-container.top {
+  position: fixed;
+  top: 0;
+}
+.et-hero-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background-color: rgba(36, 36, 36, 0.9);
+    color: rgba(235, 235, 235, 0.8);
+    letter-spacing: 0.1rem;
+	transition: all 0.5s ease;
+	font-size: 0.8rem;
+}
+.et-hero-tab:hover {
+  color: rgba(181, 160, 54, 0.8);
+  box-shadow: 0 0 10px 5px rgba(181, 160, 54, 0.8);
+  transition: all 0.5s ease;
+}
+.et-hero-tab-slider {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 6px;
+  background: rgba(181, 160, 54, 0.8);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+@media (min-width: 800px) {
+	.et-hero-tabs,
+	.et-slide {
+    h1 {
+        font-size: 3rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+	}
+	.et-hero-tab {
+		font-size: 1rem;
+	}
+}
+
+
+/* Start creation section */
+.start_button_main_frame {
+display: flex;
+justify-content: space-between;
+width: 100%;
+margin: 20px 0;
+}
+
+.start_button_left {
+width: 25%;
+background-image: url('/static/images/amulets/6.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: left;
+clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 46%, 0% 0%);
+border-left: 5px rgba(181, 160, 54, 0.8) solid;
+}
+
+.start_button_right {
+width: 25%;
+background-image: url('/static/images/amulets/7.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: right;
+clip-path: polygon(100% 0%, 100% 49%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+border-right: 5px rgba(181, 160, 54, 0.8) solid;
+}
+
+.start_button_frame {
+}
+
+.octagon {
+  width: 400px;
+  height: 400px;
+  background-color: transparent;
+  border-radius: 5%;
+  border: 5px solid rgba(181, 160, 54, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.7);
+  font-family: 'RuneFont', cursive;
+  font-size: 100px;
+  background-image: url('/static/images/create_section/start_button.png');
+  background-size: cover;
+  cursor: pointer;
+  transition: all 200ms linear;
+}
+@media (max-width: 767px) {
+  .octagon {
+    width: 150px;
+    height: 150px;
+    font-size: 40px;
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.7);
+  }
+  .start_button_left {
+width: 28%;
+background-position: left;
+border-left: 3px rgba(181, 160, 54, 0.8) solid;
+}
+.start_button_right {
+width: 28%;
+background-position: right;
+border-right: 3px rgba(181, 160, 54, 0.8) solid;
+}
+}
+
+.octagon:hover {
+box-shadow: 0 0 50px 30px rgba(255, 255, 255, 0.8);
+text-shadow: 3px 3px 20px white,
+    -2px 1px 30px rgba(181, 160, 54, 0.8);
+border-radius: 10%;
+background-color: gold;
+letter-spacing: 1px;
+}
+
+.create-text {
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.steps_frame_text {
+  border-top: 8px rgba(181, 160, 54, 0.8) solid;
+  border-radius: 20%;
+  margin: 50px 0 0 0;
+}
+
+.steps_frame_images {
+border-bottom: 8px rgba(181, 160, 54, 0.8) solid;
+display: flex;
+justify-content: center;
+justify-content: center;
+border-radius: 20%;
+padding: 0 0 10px 0;
+width: 40%;
+}
+
+.heart {
+width: 40%;
+}
+.name {
+width: 60%;
+}
+.horoscope {
+width: 60%;
+}
+.qualities {
+width: 90%;
+}
+.goals {
+width: 90%;
+}
+
+@media (max-width: 767px) {
+  .steps_frame_text {
+  border-top: 5px rgba(181, 160, 54, 0.8) solid;
+  border-radius: 10%;
+  }
+  .steps_frame_images {
+  width: 70%;
+  border-bottom: 5px rgba(181, 160, 54, 0.8) solid;
+  }
+  .name {
+  width: 90%;
+  margin: 10px 0 0 0;
+  }
+  .horoscope {
+  width: 90%;
+  margin: 10px 0 0 0;
+  }
+  .qualities {
+  margin: 10px 0 0 0;
+  }
+  .goals {
+  margin: 10px 0 0 0;
+  }
+}
+
+#material_frame {
+display: flex;
+flex-direction: row-reverse;
+justify-content: space-between;
+justify-content: center;
+}
+
+#material_frame p {
+width: 75%;
+margin: 0 0 0 20px;
+border-bottom: 8px rgba(181, 160, 54, 0.8) solid;
+border-radius: 0% 0% 20% 0% / 0% 0% 10% 0%;
+}
+
+#material_frame_images {
+width: 20%;
+border: 4px rgba(181, 160, 54, 0.8) solid;
+border-radius: 10%;
+padding: 5px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#material_frame_images img {
+max-width: 100%;
+max-height: 100%;
+border-radius: 10%;
+}
+
+@media (max-width: 767px) {
+  #material_frame {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #material_frame p {
+    width: 100%;
+    border: none;
+    margin: 0 0 15px 0;
+  }
+  #material_frame_images {
+    width: 90%;
+    height: auto;
+  }
+}
+
+.conclusion {
+display: flex;
+justify-content: space-between;
+}
+
+.conclusion_text {
+width: 75%;
+margin: 0 20px 0 0;
+border-bottom: 8px rgba(181, 160, 54, 0.8) solid;
+border-radius: 0% 0% 0% 20% / 0% 0% 0% 10%;
+}
+
+.conclusion_image {
+width: 250px;
+border: 4px rgba(181, 160, 54, 0.8) solid;
+padding: 5px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 10%;
+}
+
+.conclusion_image img {
+max-width: 100%;
+max-height: 100%;
+border-radius: 10%;
+}
+
+@media (max-width: 767px) {
+  .conclusion {
+    flex-direction: column;
+    align-items: center;
+  }
+  .conclusion_text {
+    width: 100%;
+    border: none;
+    margin: 0 0 15px 0;
+  }
+  .conclusion_image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* About amulets section */
+.about_amulet_section {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 0 0;
+}
+
+.about_amulet_section_reverse {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.text-frame {
+  width: 60%;
+}
+#top_text {
+  border-top: 8px rgba(181, 160, 54, 0.8) solid;
+  border-radius: 20% 0% 0% 0% / 10% 0% 0% 0%;
+  padding: 15px 0 0 0;
+  margin: 0 0 25px 0;
+}
+#bottom_text {
+  border-bottom: 8px rgba(181, 160, 54, 0.8) solid;
+  border-radius: 0% 0% 20% 0% / 0% 0% 10% 0%;
+  padding: 0 0 15px 0;
+}
+
+.image-frame {
+width: 35%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+border: 4px rgba(181, 160, 54, 0.8) solid;
+border-radius: 10%;
+padding: 5px;
+}
+
+@media (max-width: 767px) {
+  .about_amulet_section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about_amulet_section_reverse {
+    flex-direction: column;
+    align-items: center;
+  }
+  .text-frame {
+    width: 100%;
+  }
+  .image-frame {
+    width: 100%;
+    height: auto;
+  }
+  #top_text {
+  border-top: 5px rgba(181, 160, 54, 0.8) solid;
+  border-radius: 20% 20% 0% 0% / 3% 3% 0% 0%;
+  }
+  #bottom_text {
+  border: none;
+  }
+}
+
+.image-frame img {
+max-width: 100%;
+max-height: 100%;
+border-radius: 10%;
+}
+
+
+/* runes Section */
+.runes_section {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 0 0;
+}
+#top_runes_text {
+  border-top: 8px rgba(181, 160, 54, 0.8) solid;
+  border-radius: 20% 0% 0% 0% / 10% 0% 0% 0%;
+  padding: 15px 0 0 0;
+  margin: 0 0 25px 0;
+}
+#three_types {
+width: 25%;
+}
+.second_runes_section {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  margin: 20px 0 0 0;
+}
+#second_runes_text {
+width: 70%;
+}
+.third_runes_section {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 0 0;
+}
+#third_runes_text {
+width: 60%;
+}
+
+@media (max-width: 767px) {
+  .runes_section, .second_runes_section, .third_runes_section {
+    flex-direction: column;
+    align-items: center;
+  }
+  #top_runes_text {
+  border-top: 5px rgba(181, 160, 54, 0.8) solid;
+  border-radius: 20% 20% 20% 20% / 5% 5% 5% 5%;
+  }
+  #second_runes_text {
+  width: 100%;
+  }
+  #three_types {
+  width: 100%;
+  }
+  #third_runes_text {
+  width: 100%;
+  }
+}
+
+
+
+/* button */
+.next_button {
+  margin: 40px 0 40px 0;
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #373B44;
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 36px;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.next_button:hover,
+.next_button:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+.next_button:active {
+  background: var(--color);
+  color: rgba(181, 160, 54, 0.8);
+}
+
+
+/* About us */
+.about_frame {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 0 0;
+}
+.about_text_frame {
+  border-top: 8px rgba(181, 160, 54, 0.8) solid;
+  border-radius: 20% 0% 0% 0% / 10% 0% 0% 0%;
+  padding: 15px 0 0 0;
+  margin: 0 0 25px 0;
+  width: 60%;
+}
+
+.second_about_frame {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin: 20px 0 0 0;
+}
+.second_about_text_frame {
+  border-bottom: 8px rgba(181, 160, 54, 0.8) solid;
+  border-radius: 0% 0% 20% 0% / 0% 0% 10% 0%;
+  padding: 0 0 15px 0;
+  width: 60%;
+}
+@media (max-width: 767px) {
+  .about_frame, .second_about_frame {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about_text_frame {
+  border-top: 5px rgba(181, 160, 54, 0.8) solid;
+  border-radius: 20% 20% 20% 20% / 5% 5% 5% 5%;
+  width: 100%;
+  }
+  .second_about_text_frame {
+  width: 100%;
+  border: none;
+  }
+  #three_types {
+  width: 100%;
+  }
+  #third_runes_text {
+  width: 100%;
+  }
+}
+
+/* Contact */
+.contact_text_frame {
+display: flex;
+justify-content: space-between;
+width: 100%;
+margin: 20px 0;
+}
+@media (max-width: 767px) {
+    .contact_text_frame {
+    flex-direction: column;
+    }
+}

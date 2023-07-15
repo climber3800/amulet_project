@@ -1,0 +1,56 @@
+.image-options-qualities{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;;
+  flex-wrap: wrap;
+}
+
+.quality_option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px black solid;
+    width: 200px;
+    height: 300px;
+    margin: 10px 20px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.quality_option:not(.selected) {
+  box-shadow: 0px 0px 0px black;
+  transform: scale(1);
+  background-color: transparent;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out, background-color 1s ease-in-out;
+}
+.quality_option:hover {
+  box-shadow: 0px 0px 10px black;
+}
+.quality_option.selected {
+  box-shadow: 0px 0px 20px black;
+  transform: scale(1.05);
+  background-color: rgba(181, 160, 54, 0.8);
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out, background-color 1s ease-in-out;
+}
+
+.quality-option-images {
+width: 100%;
+height: 90%;
+background-size: cover;
+background-position: center;
+}
+
+.quality_name {
+display: none;
+}
+.quality_name input[type="checkbox"]{
+display: none;
+}
+
+.quality_text {
+font-size: 25px;
+}
+
+@media (max-width: 767px) {
+h1 {
+  margin: 35px 0 0 0;
+}

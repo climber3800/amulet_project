@@ -1,0 +1,28 @@
+{% extends "runes/base_runes.html" %}
+{% block body_block %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/goals.css' %}">
+
+<section>
+    <h1 class="h1-runes">Final step!<br>Choose two main goals you are up to achieve!</h1>
+    <form class="style_form" method="post">
+        <div class="image-options-goals">
+            {% for goal in form.goals %}
+            <div class="goal_option">
+                <div class="goal-option-images" style="background-image: url('{% static 'images/goals/'|add:goal.choice_label|add:'.jpg' %}');"></div>
+                <div class="goal_name">{{ goal }}</div>
+                <div class="goal_name_visible">{{ goal.choice_label }}</div>
+                <div class="goal_line"></div>
+                <div class="goal_text_frame">
+                    <p class="goal_description"></p>
+                </div>
+            </div>
+            {% csrf_token %}
+            {% endfor %}
+        </div>
+            <button class="next_button" name="next4">NEXT</button>
+    </form>
+</section>
+
+<script src="{% static 'javascript/goals.js' %}"></script>
+{% endblock %}

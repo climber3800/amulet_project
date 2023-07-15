@@ -1,0 +1,134 @@
+#amulet_heart_text {
+ border-top: 8px rgba(181, 160, 54, 0.8) solid;
+ border-radius: 20%;
+ padding: 20px 0 20px 0;
+}
+@media (max-width: 767px) {
+h1 {
+  margin: 35px 0 0 0;
+}
+#amulet_heart_text {
+  border-top: 5px rgba(181, 160, 54, 0.8) solid;
+  border-radius: 10%;
+  margin: 20px 0 0 0;
+}
+}
+
+.image-options {
+  display: flex;
+  justify-content: space-around;;
+  flex-wrap: wrap;
+}
+
+.image-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px #303030 solid;
+  border-radius: 5%;
+  width: 300px;
+  height: 400px;
+  margin: 0 20px 40px 20px;
+  cursor: pointer;
+  transition: box-shadow 1s ease-in-out, transform 1s ease-in-out, background-image 1s ease-in-out, height 1s ease-in-out;
+}
+.image-option:hover {
+  box-shadow: 0 0 15px 15px black;
+}
+.image-option.selected {
+  box-shadow: 0 0 15px 5px black;
+  transform: scale(1.05);
+  height: 500px;
+  background-color: gold;
+  border: 5px rgba(181, 160, 54, 0.8) solid;
+  transition: box-shadow 1s ease-in-out, transform 1s ease-in-out, background-color 1s ease-in-out, height 1s ease-in-out, border 1s ease-in-out;
+}
+.image-option:not(.selected) {
+  transition: box-shadow 1s ease-in-out, transform 1s ease-in-out, background-color 1s ease-in-out, height 1s ease-in-out, border 1s ease-in-out;
+}
+.image-option:not(.selected):hover {
+  box-shadow: 0 0 25px 5px black;
+  transform: scale(1.05);
+}
+
+.image-option-images {
+    width: 100%;
+    height: 70%;
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+.image-option.selected .image-option-images {
+  height: 40%;
+  transition: height 1s ease-in-out;
+}
+.image-option:not(.selected) .image-option-images {
+  height: 70%;
+  transition: height 1s ease-in-out;
+}
+
+.option-name {
+    width: 100%;
+    height: 15%;
+    text-align: center;
+    font-size: 30px;
+    margin: 5px 0 0 0;
+    font-family: cursive, sans-serif;
+}
+.image-option.selected .option-name {
+  height: 10%;
+  transition: height 1s ease-in-out;
+}
+
+.gold_frame_symbol {
+width: 70%;
+border: 3px rgba(181, 160, 54, 0.8) solid;
+border-radius: 60%;
+}
+.image-option.selected .gold_frame_symbol {
+  width: 80%;
+  border-radius: 80%;
+  border: 3px #303030 solid;
+  transition: width 1s ease-in-out, border-radius 1s ease-in-out, border 1s ease-in-out;
+}
+
+.option_text_frame {
+width: 100%;
+height: 5%;
+}
+.image-option.selected .option_text_frame {
+  height: 45%;
+  transition: height 1s ease-in-out;
+}
+
+.symbol_description {
+  display: none;
+  text-align: center;
+  padding: 10px 10px;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  font-size: 16px;
+  margin: 5px 5px 0 5px;
+  border-left: 3px #303030 solid;
+  border-right: 3px #303030 solid;
+  border-top: 2px #303030 solid;
+  border-radius: 0% 0% 10% 10% / 0% 0% 10% 10%;
+  transition: opacity 0.5s ease-in-out;
+}
+.image-option.selected .symbol_description {
+  display: block;
+  opacity: 0;
+  animation: fade-in 0.5s ease-in-out 1s forwards;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.image-option input[type="radio"] {
+  display: none;
+}
